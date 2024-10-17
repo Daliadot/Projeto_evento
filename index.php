@@ -53,6 +53,41 @@
 	<tr>
 	<td colspan=2><input type="submit" value="encontrar"></td>
 	</tr>
+	
+
+	<form action="encont_all.php" method="POST">
+	<fieldset>
+	<table>
+	<tr>
+	<td>Mostrar todos os eventos:</td>
+	<td><input size="15" name="codigo"></td>
+	</tr>
+	<tr>
+	<td colspan=2><input type="submit" value="encont_all"></td>
+	</tr>
+
+
+	<form action="atulize.php" method="POST">
+	<fieldset>
+	<table>
+	<tr>
+	<td>Atualizar eventos:</td>
+	<td><input size="15" name="atulize"></td>
+	</tr>
+	<tr>
+	<td colspan=2><input type="submit" value="a"></td>
+	</tr>
+
+	<form action="delit.php" method="POST">
+	<fieldset>
+	<table>
+	<tr>
+	<td>deletar evento</td>
+	<td><input size="15" name="delit"></td>
+	</tr>
+	<tr>
+	<td colspan=2><input type="submit" value="a"></td>
+	</tr>
 	</table>
 	</fieldset>
 	</form>
