@@ -41,6 +41,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_stmt_close($stmt);
 }
 
+// Verifica se a atualização foi solicitada
+if (isset($_POST['update'])) {
+    // Captura o código do evento a ser atualizado
+    $codigo = $_POST['codigo'];
+    
+    // Captura os novos dados do evento
+    $nome_evento = $_POST['nome_evento'];
+    $data_evento = $_POST['data_evento'];
+    $hr_inicio_evento = $_POST['hr_inicio_evento'];
+    $hr_fim_evento = $_POST['hr_fim_evento'];
+    $desc_evento = $_POST['desc_evento'];
+    $local_evento = $_POST['local_evento'];
+    $resp_evento = $_POST['resp_evento'];
+
+    // Prepara a consulta SQL para atualizar os dados
+    $update_sql = "UPDATE eventos SET Nome_Evento = ?, Data_Evento = ?, Hora_Inicio = ?, Hora_Fim = ?, Desc_Evento = ?, Local_Evento = ?, Resp_Evento = ? WHERE Id_Evento = ?";
+    $stmt = mysqli_prepare($conexao, $update_sql);
+    mysqli_stmt_bind_param($stmt, "sssssssi", $nome_evento, $data_evento, $hr_inicio_evento, $hr_fim_evento, $desc_evento, $local_evento, $resp_evento, $codigo);
+
+    // Executa a consulta de atualização
+    if (mysqli_stmt_execute($stmt)) {
+        echo "<p>Evento atualizado com sucesso!</p>";
+    } else {
+        echo "<p>Erro ao atualizar evento: " . mysqli_stmt_error($stmt) . "</p>";
+    }
+
+    // Fecha a declaração de atualização
+    mysqli_stmt_close($stmt);
+}
+
 // Consulta para recuperar os dados
 $sql = "SELECT * FROM eventos";
 $resultado = mysqli_query($conexao, $sql);
