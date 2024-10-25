@@ -1,95 +1,64 @@
-<html>
-<body>
-</form>
-<form action="values_cadastro.php" method="POST">
-	<fieldset>
-	<table>
-	<tr>
-	<td>Informe o codigo:</td>
-	<td><input size="15" name="codigo"></td>
-	</tr>
-	<tr>
-	<td>Informe o Nome do evento:</td>
-	<td><input size="15" name="nome_evento"></td>
-	</tr>
-	<tr>
-	<td>Informe a Data do evento:</td>
-	<td><input size="15" name="data_evento"></td>
-	</tr>
-    <tr>
-	<td>Informe o Horario de Inicio do evento:</td>
-	<td><input size="15" name="hr_inicio_evento"></td>
-	</tr>
-    <tr>
-	<td>Informe o Horario de Fim do evento:</td>
-	<td><input size="15" name="hr_fim_evento"></td>
-	</tr>
-    <tr>
-	<td>Informe a Descrição do Evento:</td>
-	<td><input size="15" name="desc_evento"></td>
-	</tr>
-    <tr>
-	<td>Informe o Local do evento:</td>
-	<td><input size="15" name="local_evento"></td>
-	</tr>
-    <tr>
-	<td>Informe o responsável do evento:</td>
-	<td><input size="15" name="resp_evento"></td>
-	</tr>
-    <tr>
-	<td colspan=2><input type="submit" value="Cadastrar"></td>
-	</tr>
-	</table>
-	</fieldset>
-	</form>
-
-	<form action="encontrar.php" method="POST">
-	<fieldset>
-	<table>
-	<tr>
-	<td>Informe o codigo evento para encontrá-lo:</td>
-	<td><input size="15" name="codigo"></td>
-	</tr>
-	<tr>
-	<td colspan=2><input type="submit" value="encontrar"></td>
-	</tr>
-	
-
-	<form action="encont_all.php" method="POST">
-	<fieldset>
-	<table>
-	<tr>
-	<td>Mostrar todos os eventos:</td>
-	<td><input size="15" name="codigo"></td>
-	</tr>
-	<tr>
-	<td colspan=2><input type="submit" value="encont_all"></td>
-	</tr>
-
-
-	<form action="atulize.php" method="POST">
-	<fieldset>
-	<table>
-	<tr>
-	<td>Atualizar eventos:</td>
-	<td><input size="15" name="atulize"></td>
-	</tr>
-	<tr>
-	<td colspan=2><input type="submit" value="a"></td>
-	</tr>
-
-	<form action="delit.php" method="POST">
-	<fieldset>
-	<table>
-	<tr>
-	<td>deletar evento</td>
-	<td><input size="15" name="delit"></td>
-	</tr>
-	<tr>
-	<td colspan=2><input type="submit" value="a"></td>
-	</tr>
-	</table>
-	</fieldset>
-	</form>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Compromissos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1 {
+            color: #333;
+        }
+        .menu {
+            margin-top: 20px;
+        }
+        .menu a {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .menu a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body class= grad>
+    <div class= "grade">
+    <div class="container">
+        <h1>Agenda de Compromissos ata</h1>
+        <div class="menu">
+            <a href="cadastrar_evento.php">Cadastrar Evento</a>
+            <a href="consultar_evento.php">Consultar Evento</a>
+            <a href="listar_eventos.php">Listar Todos os Eventos</a>
+            <a href="atualizar_evento.php">Atualizar Evento</a>
+            <a href="remover_evento.php">Remover Evento</a>
+        </div>
+    </div>
+    </div>
 </body>
 </html>
